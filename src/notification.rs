@@ -15,6 +15,7 @@ impl SingleNotification {
             self.hnd = Notification::default()
                 .summary(&summary)
                 .urgency(urgency)
+                .icon("battery")
                 .show()
                 .map_err(|err| error!("error showing notification: {err}"))
                 .ok();
